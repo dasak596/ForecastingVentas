@@ -37,7 +37,7 @@ def load_model():
 
 df = load_data()
 model = load_model()
-model.feature_names_in_
+#To see models variables: model.feature_names_in_
 
 
 
@@ -52,7 +52,7 @@ run_sim = st.sidebar.button("🚀 Simular Ventas", use_container_width=True)
 # --- Función de predicción recursiva ---
 def simular_predicciones(df_prod, model, descuento, ajuste_comp):
     df_pred = df_prod.copy().sort_values('fecha').reset_index(drop=True)
-    st.write(df_pred.columns.tolist())
+    #To write dataframe variables: st.write(df_pred.columns.tolist())
     dias = df_pred.shape[0]
     predicciones = []
     lags_cols = [f'unidades_vendidas_lag{i}' for i in range(1,8)]
